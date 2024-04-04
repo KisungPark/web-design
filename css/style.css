@@ -1,8 +1,0 @@
-@charset "utf-8";
-
-*{margin: 0; padding: 0; box-sizing: border-box; font-family: '맑은 고딕'; background: #fff; color: #333}
-li,ul,ol,dl{list-style: none;}
-a{text-decoration:none; color: inherit;}
-img{max-width: 100%}
-button{cursor: pointer;}
-table{width:100%}
