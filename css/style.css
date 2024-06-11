@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 *{
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: '맑은 고딕';
@@ -12,12 +12,10 @@ body{
 }
 table{
     width: 100%;
-}
-ul{
-    list-style: none;
+    border-collapse: collapse;
 }
 li{
-    line-style: none;
+    list-style: none;
 }
 a{
     display: block;
@@ -83,27 +81,31 @@ main{
     height:400px;
     overflow: hidden;
 }
+.slider>ul{
+    position:relative;
+}
 .slide{
     height: 400px;
-    text-align: center;
-    position: relative;
+    position:relative;
 }
 .slide>h2{
-    position: absolute;
+    display:inline-block;
+    text-align: center;
     background: rgba(0,0,0,0.7);
     color: white;
-    top: 50%;
-    left: 50%;
+    position:absolute;
+    top:50%;
+    left:50%;
     transform: translate(-50%,-50%);
 }
-.slide:nth-child(1){
+.s1{
     background: url("/img/type11/[Slide]/img1.jpg") no-repeat center/cover;
 }
-.slide:nth-child(2){
-    background: url("/img/type11/[Slide]/img1.jpg") no-repeat center/cover;
+.s2{
+    background: url("/img/type11/[Slide]/img2.jpg") no-repeat center/cover;
 }
-.slide:nth-child(3){
-    background: url("/img/type11/[Slide]/img1.jpg") no-repeat center/cover;
+.s3{
+    background: url("/img/type11/[Slide]/img3.jpg") no-repeat center/cover;
 }
 .banner{
     height:200px;
@@ -129,64 +131,65 @@ main{
     top: 20px;
     font-size: 100px;
 }
-.tab{
+.tabmenu{
     height:250px;
     background: wheat;
 }
-.tab>ul{
+.tabmenu>ul{
     display: flex;
     position: relative;
 }
-.tab>ul>li{
-    margin:0;
-}
-.tab>ul>li>a{
+.tabmenu>ul>li>a{
     width: 100px;
     padding: 5px;
     text-align: center;
     background: yellow;
     font-weight: bold;
 }
-.tab>ul>li.on>a{
+.tabmenu>ul>li.on>a{
     background: orange;
 }
 .tab-con {
     position: absolute;
     left: 0;
     width: 100%;
+    padding: 10px;
     display: none;
 }
-.tab-con th{
-}
 .tab-con th a{
-    margin: 0;
     width: 900px;
     padding: 5px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.tab>ul>li.on .tab-con{
+.tab-con tr{
+    border-bottom: 1px solid;
+}
+.tabmenu>ul>li.on .tab-con{
     display: block;
 }
 .tab-con ul{
     display: flex;
-    margin: 50px;
+    gap: 50px;
+    margin-top: 10px;
+    justify-content: center;
+}
+.tab-con img{
+    width: 350px;
+    height: 180px;
+    object-fit: cover;
 }
 .shortcut{
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
     text-align: center;
     background: white;
     padding: 5px;
 }
 .shortcut li{
-    border-botton: 1px dashed;
     margin: 5px;
-}
-.shortcut li:last-child{
-    border-botton: 0px;
 }
 footer{
     position: relative;
@@ -223,6 +226,18 @@ footer{
     left: 50%;
     transform: translate(-50%,-50%);
     display: none;
+    background: gray;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+}
+.pop p{
+    margin-top: 20px;
+}
+.pop button{
+    border: none;
+    padding: 5px;
+    background: yellow;
 }
 .pop.active{
     display:block;
