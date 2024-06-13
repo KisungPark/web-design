@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+li{
+    list-style:none;
+}
+img{
+    max-width:100%;
+    vertical-align: top;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+    display: block;
+}
+button{
+    cursor: pointer;
+}
+body{
+    background: #fff;
+    color: #333;
+}
+.wrap{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.inner{
+    height: calc(100% - 120px);
+    display: flex;
+}
+header{
+    width: 200px;
+}
+.logo{
+    margin-top: 10px;
+}
+nav{
+    margin-top: 60px;
+}
+nav>ul>li>a{
+    padding: 10px;
+    text-align: center;
+    background: lightgreen;
+    font-weight: bold;
+}
+nav>ul>li:hover>a, nav>ul>li.on>a, nav>ul>li>a:focus{
+    background: green;
+}
+.sub{
+    display:none;
+}
+.sub>li>a{
+    padding: 10px;
+}
+.sub>li>a:hover, .sub>li>a:focus{
+    background: lightgreen;
+}
+.spotmenu>ul{
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+    justify-content: center;
+}
+.spotmenu>ul>li{
+    font-size: 12px;
+}
+.spotmenu>ul>li:first-child{
+    border-right: 1px solid;
+    padding-right: 10px;
+}
+main{
+    width: 400px;
+}
+.banner{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 10%;
+}
+.b_img{
+    padding: 10px;
+}
+.b_img img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+.b_con{
+    width: 250px;
+    padding: 5px 0;
+}
+.b_arrow{
+    border: none;
+    background: none;
+    font-size: 60px;
+}
+.notice{
+    padding: 10px;
+    height: 35%;
+}
+.notice table{
+    margin-top: 20px;
+}
+.notice tr{
+    text-align: left;
+    border-bottom: 1px dashed;
+}
+.notice th{
+    text-align: left;
+}
+.notice a{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 290px;
+    padding: 10px 0;
+}
+.gallery{
+    padding: 10px;
+    height: 35%;
+}
+.gallery>ul{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.gallery a{
+    text-align: center;
+}
+.gallery img{
+    width: 180px;
+    height: 180px;
+}
+.gallery span{
+    display: inline-block;
+    padding-top: 5px;
+    font-weight: bold;
+}
+.link{
+    height: 20%;
+    padding: 10px;
+}
+.link>ul{
+    display: flex;
+    gap: 10px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.link a{
+    text-align: center;
+}
+.link img{
+    width: 80px;
+    height: 80px;
+}
+.link span{
+    display: inline-block;
+    padding-top: 5px;
+    font-weight: bold;
+}
+.slider{
+    width: calc(100% - 600px);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.slider ul{
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 300%;
+    top: 0;
+    left: 0;
+}
+.slide{
+    width: 33.3%;
+    height: 100%;
+    position: relative;
+}
+.slide h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: darkgray;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 30px;
+}
+.s1{
+    background: url("/img/type11/[Slide]/img1.jpg") no-repeat center/cover;
+}
+.s2{
+    background: url("/img/type11/[Slide]/img2.jpg") no-repeat center/cover;
+}
+.s3{
+    background: url("/img/type11/[Slide]/img3.jpg") no-repeat center/cover;
+}
+footer{
+    height:120px;
+    background: lightgray;
+    display: flex;
+    align-items: center;
+}
+.f_logo{
+    width: 200px;
+    filter: grayscale(1);
+}
+footer>ul{
+    margin-left: 40px;
+}
+footer>ul>li{
+    padding: 5px;
+}
+.f_menu>ul{
+    display: flex;
+    gap: 5px;
+}
+.f_menu>ul>li{
+    border-right: 1px solid;
+    padding-right: 5px;
+}
+.f_menu>ul>li:last-child{
+    border-right: 0;
+}
+.modal{
+    display:none;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background: rgba(0,0,0,.8);
+}
+.modal>.content{
+    background: white;
+    border-radius: 10px;
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+}
+.modal>.content p{
+    margin-top: 20px;
+}
+.m_button{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    background: wheat;
+    padding: 5px;
+    border-radius: 10px;
+}
